@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+{% block title%}
+    Bookmark Detail
+{% endblock %}
+{% block content%}
+    이름 : {{object.site_name}}<br/>
+    주소 : {{object.url}}<br/>
+    <a href="{% url 'list'%}" class="btn btn-primary">홈으로 이동</a>
+{% endblock %}

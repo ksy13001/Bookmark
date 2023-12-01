@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block title%}
+    Bookmark Create
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        <!-- 폼 사용시 보안상 사용        -->
+        {% csrf_token %}
+        <!-- 각 입력 필드를 문단 요소로 래핑 하여 표시-> 각 필드를 한 줄씩 표시 -->
+        입력</br>
+        {{ form.as_p }}
+        <input type="submit" value="Create" class="btn btn-info btn-sm">
+    </form>
+{% endblock %}
